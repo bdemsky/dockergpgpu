@@ -1,0 +1,13 @@
+#!/bin/bash
+cd gpgpu-sim_distribution
+
+cp ../vectorAdd.cu .
+
+nvcc vectorAdd.cu --cudart shared -o vectorAdd
+
+cp configs/tested-cfgs/SM6_TITANX/config_pascal_islip.icnt .
+cp configs/tested-cfgs/SM6_TITANX/gpgpusim.config .
+
+source setup_environment
+
+./vectorAdd

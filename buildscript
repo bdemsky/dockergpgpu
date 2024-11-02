@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#git clone -b dev https://github.com/gpgpu-sim/gpgpu-sim_distribution.git
+git clone https://github.com/bdemsky/gpgpu-sim_distribution.git
+cd gpgpu-sim_distribution
+source setup_environment release
+make -j
+
